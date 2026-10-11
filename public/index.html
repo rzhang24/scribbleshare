@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScribbleShare - Collaborative Drawing Canvas</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+    <div id="toolbar">
+        <div class="control-group">
+            <label for="colorPicker">Color</label>
+            <input type="color" id="colorPicker" value="#000000">
+        </div>
+        <div class="control-group">
+            <label for="brushSize">Size</label>
+            <select id="brushSize">
+                <option value="2">Fine (2px)</option>
+                <option value="5" selected>Medium (5px)</option>
+                <option value="10">Thick (10px)</option>
+                <option value="20">Heavy (20px)</option>
+            </select>
+        </div>
+        <button id="eraserBtn" class="btn">Eraser</button>
+        <button id="exportBtn" class="btn action-btn">Export PNG</button>
+        <button id="shareBtn" class="btn share-btn">Copy Invite Link</button>
+    </div>
+    <div id="cursor-container"></div>
+    <canvas id="paintCanvas"></canvas>
+    <script src="client.js"></script>
+</body>
+</html>
