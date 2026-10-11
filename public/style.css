@@ -14,3 +14,10 @@ canvas { display: block; width: 100vw; height: 100vh; background: #ffffff; curso
 .remote-cursor { position: absolute; width: 12px; height: 12px; background: #ff4757; border-radius: 50%; pointer-events: none; z-index: 99; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
 @media (max-width: 600px) { #toolbar { flex-wrap: wrap; width: 90%; border-radius: 20px; justify-content: center; } }
 
+#appLogo {
+    height: 38px;        
+    width: 38px;           
+    border-radius: 8px;  
+    object-fit: contain;  
+    margin-right: 5px;     
+}
