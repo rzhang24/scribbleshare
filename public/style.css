@@ -52,7 +52,7 @@ canvas { display: block; width: 100vw; height: 100vh; background: #ffffff; curso
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     backdrop-filter: blur(4px);
-    pointer-events: none; /* Allows users to draw right through the text background without clicking it */
+    pointer-events: none;
     z-index: 100;
     letter-spacing: 0.3px;
 }
