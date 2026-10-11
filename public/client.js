@@ -86,6 +86,12 @@ socket.on('mouse-move', (data) => {
     cursor.style.top = `${data.y}px`;
 });
 
+socket.on('load-history', (history) => {
+    history.forEach(data => {
+        drawLine(data.x1, data.y1, data.x2, data.y2, data.color, data.size, false);
+    });
+});
+
 socket.on('user-disconnected', (id) => {
     const cursor = document.getElementById(`cursor-${id}`);
     if (cursor) cursor.remove();
