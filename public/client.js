@@ -28,6 +28,8 @@ const brushSize = document.getElementById('brushSize');
 const eraserBtn = document.getElementById('eraserBtn');
 const exportBtn = document.getElementById('exportBtn');
 const shareBtn = document.getElementById('shareBtn');
+const clearBtn = document.getElementById('clearBtn');
+
 
 eraserBtn.addEventListener('click', () => {
     isEraser = !isEraser;
