@@ -34,6 +34,12 @@ io.on('connection', (socket) => {
         socket.on('disconnect', () => {
             io.to(roomId).emit('user-disconnected', socket.id);
         });
+    socket.on('clear-canvas', () => {
+            if (roomHistories[roomId]) {
+            roomHistories[roomId] = []; // Clear stored history memory for this room
+            }
+            io.to(roomId).emit('clear-canvas'); // Tell everyone in the room to wipe their screens
+        });
     });
 });
 
