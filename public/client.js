@@ -106,6 +106,16 @@ exportBtn.addEventListener('click', () => {
     link.click();
 });
 
+clearBtn.addEventListener('click', () => {
+    if (confirm("Are you sure you want to clear the entire canvas for everyone?")) {
+        socket.emit('clear-canvas');
+    }
+});
+socket.on('clear-canvas', () => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+});
+
+
 shareBtn.addEventListener('click', () => {
     navigator.clipboard.writeText(window.location.href).then(() => alert('Link copied!'));
 });
